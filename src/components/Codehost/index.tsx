@@ -27,7 +27,6 @@ class Codehost extends React.Component<props,object>{
     // })
   }
   updateCode() {
-    console.log('改变了内容')
     const fs = require('fs');
     fs.writeFile(utils.sys_hosts_path, this.state.code, function(err) {
       if(err) {
