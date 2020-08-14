@@ -1,30 +1,16 @@
 import styled, { keyframes } from 'styled-components'
 
-const rotate = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`
-
 export const Container = styled.div`
     height: 100vh;
     padding: 25px;
     display: flex;
+    flex:0 0 240px;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    background:#4e495d;
 `
-
-export const Image = styled.img`
-    width: 300px;
-    animation: ${rotate} 15s linear infinite;
-    opacity: 0.1;
-`
-export const Text = styled.p`
-    margin-top: 35px;
-    font-size: 20px;
-    font-weight: bold;
+export const Item = styled.div`
+    margin: 18px 0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 `

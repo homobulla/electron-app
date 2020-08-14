@@ -4,12 +4,15 @@ import * as url from 'url'
 import installExtension, { REACT_DEVELOPER_TOOLS, REDUX_DEVTOOLS } from 'electron-devtools-installer'
 
 let mainWindow: Electron.BrowserWindow | null
-
+const platform = process.platform;
 function createWindow() {
   mainWindow = new BrowserWindow({
     width: 1100,
     height: 700,
+    minHeight:500,
+    minWidth:500,
     backgroundColor: '#191622',
+    titleBarStyle: platform === 'darwin' ? 'hiddenInset' : 'default',
     webPreferences: {
       nodeIntegration: true
     }

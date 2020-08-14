@@ -1,15 +1,21 @@
 import React from 'react'
 
-import { Container, Image, Text } from './styles'
+import { Container ,Item} from './styles'
+import { Switch } from 'antd';
+import utils from '../../utils/utils';
+function onChange(checked:Boolean) {
+  const fs = require('fs');
+  console.log(`switch to ${checked}`);
+}
+console.log(React)
 
 const Greetings: React.FC = () => {
   return (
     <Container>
-      <Image
-        src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg"
-        alt="ReactJS logo"
-      />
-      <Text>An Electron boilerplate including TypeScript, React, Jest and ESLint.</Text>
+     <div>
+       <Item><span>My hosts</span><Switch defaultChecked onChange={onChange} /></Item>
+       <Item><span>backup</span><Switch defaultChecked onChange={onChange} /></Item>
+     </div>
     </Container>
   )
 }
